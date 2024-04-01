@@ -1,0 +1,38 @@
+﻿<Window x:Class="BirdFlightSimulator.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Симулятор полета птицы" Height="700" Width="800">
+    <Grid>
+        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
+            <!-- Угол -->
+            <Label Content="Угол (в градусах):"/>
+            <TextBox x:Name="Angle" Width="200" Margin="10"/>
+            <!-- Скорость -->
+            <Label Content="Скорость (м/с):"/>
+            <TextBox x:Name="Speed" Width="200" Margin="10"/>
+            <!-- Сопротивление воздуха -->
+            <Label Content="Сопротивление воздуха:"/>
+            <TextBox x:Name="Resistance" Width="200" Margin="10"/>
+            <!-- X препятствия -->
+            <Label Content="X препятствия:"/>
+            <TextBox x:Name="ObstacleX" Width="200" Margin="10"/>
+            <!-- Y препятствия -->
+            <Label Content="Y препятствия:"/>
+            <TextBox x:Name="ObstacleY" Width="200" Margin="10"/>
+            <!-- Ширина препятствия -->
+            <Label Content="Ширина препятствия:"/>
+            <TextBox x:Name="ObstacleWidth" Width="200" Margin="10"/>
+            <!-- Высота препятствия -->
+            <Label Content="Высота препятствия:"/>
+            <TextBox x:Name="ObstacleHeight" Width="200" Margin="10"/>
+            <!-- Начальная X -->
+            <Label Content="Начальная X"/>
+            <TextBox x:Name="StartX" Width="200" Margin="10"/>
+            <!-- Начальная Y -->
+            <Label Content="Начальная Y"/>
+            <TextBox x:Name="StartY" Width="200" Margin="10"/>
+            <!-- Кнопка запуска симуляции -->
+            <Button x:Name="StartSimulationButton" Content="Запустить симуляцию" Width="200" Margin="20" Click="StartSimulation"/>
+        </StackPanel>
+    </Grid>
+</Window>
