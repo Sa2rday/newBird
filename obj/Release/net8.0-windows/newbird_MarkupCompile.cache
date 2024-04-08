@@ -4,11 +4,11 @@
 winexe
 C#
 .cs
-D:\programming\GitHub\newBird\obj\Debug\net8.0-windows\
+D:\programming\GitHub\newBird\obj\Release\net8.0-windows\
 newbird
 none
 false
-TRACE;DEBUG;NET;NET8_0;NETCOREAPP
+TRACE;RELEASE;NET;NET8_0;NETCOREAPP
 D:\programming\GitHub\newBird\App.xaml
 11407045341
 

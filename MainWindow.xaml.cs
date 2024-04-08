@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Windows;
 using System.Windows.Controls;
+using System.IO;
+using System.Text;
 
 namespace BirdFlightSimulator
 {
@@ -18,7 +20,15 @@ namespace BirdFlightSimulator
 
             // Путь к файлу с данными по умолчанию
             string filename = "default_flight_data.txt";
-            bird.LoadFlightData(filename);
+            try
+            {
+                bird.LoadFlightData(filename);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Произошла ошибка при загрузке данных полета: {ex.Message}", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
+                return;
+            }
 
             // Проверяем, заполнены ли поля ввода
             if (string.IsNullOrWhiteSpace(((TextBox)FindName("Angle")).Text) ||
@@ -32,7 +42,7 @@ namespace BirdFlightSimulator
                 string.IsNullOrWhiteSpace(((TextBox)FindName("StartY")).Text))
             {
                 // Если пользователь не ввел данные, читаем их из файла
-                
+
             }
             else
             {
@@ -55,7 +65,18 @@ namespace BirdFlightSimulator
             bird.PrintWay();
 
             // Опционально, сохраняем результат в файл
-            bird.SaveWay("output_path.txt");
+            string outputPath = "output_path.txt";
+            bird.SaveWay(outputPath);
+
+            try
+            {
+                string resultText = File.ReadAllText(outputPath);
+                MessageBox.Show($"Симуляция успешно завершена!\nРезультаты:\n{resultText}", "Симуляция завершена", MessageBoxButton.OK, MessageBoxImage.Information);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Произошла ошибка при чтении результата симуляции: {ex.Message}", "Ошибка чтения файла", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
         }
     }
 }
