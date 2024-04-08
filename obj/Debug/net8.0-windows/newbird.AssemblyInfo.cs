@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("newbird")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e62904638cce6a42b180c810bb94aca590e1fb75")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ced1503bc434531c9e1b9fcfb354baaced08390a")]
 [assembly: System.Reflection.AssemblyProductAttribute("newbird")]
 [assembly: System.Reflection.AssemblyTitleAttribute("newbird")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
