@@ -3,7 +3,15 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="Симулятор полета птицы" Height="700" Width="800">
     <Grid>
-        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
+
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition Width="Auto"/>
+			<!-- Для элементов управления вводом, которые займут только необходимое пространство -->
+			<ColumnDefinition Width="*"/>
+			<!-- Для Canvas, который займет оставшееся пространство -->
+		</Grid.ColumnDefinitions>
+
+		<StackPanel Grid.Column="0" VerticalAlignment="Top" HorizontalAlignment="Left">
             <!-- Угол -->
             <Label Content="Угол (в градусах):"/>
             <TextBox x:Name="Angle" Width="200" Margin="10"/>
@@ -34,5 +42,8 @@
             <!-- Кнопка запуска симуляции -->
             <Button x:Name="StartSimulationButton" Content="Запустить симуляцию" Width="200" Margin="20" Click="StartSimulation"/>
         </StackPanel>
-    </Grid>
+
+		<Canvas x:Name="flightCanvas" Grid.Column="1" Background="LightGray"/>
+
+	</Grid>
 </Window>

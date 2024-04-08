@@ -142,4 +142,9 @@ class Bird
             }
         }
     }
+
+    public List<Coord> GetTrajectory()
+    {
+        return trajectory;
+    }
 }
